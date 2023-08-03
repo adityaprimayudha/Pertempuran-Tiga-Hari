@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public Animator anim;
-    Vector2 moveDirection;
+    private Vector2 moveDirection;
     public float attackRange = 2f; // The attack range of the player
     public LayerMask enemyLayerMask; // The layer mask for enemy detection
     public GameObject bulletPrefab; // The prefab for the bullet
@@ -47,6 +47,19 @@ public class PlayerController : MonoBehaviour
         //Check attack range
         if (Input.GetMouseButtonDown(0))
         {
+            // Get the direction towards the cursor
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 aimDir = mousePosition - transform.position;
+            aimDir.z = 0f;
+
+            // Update the player's rotation to face the cursor
+            if (aimDir != Vector3.zero)
+            {
+                float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                anim.SetFloat("lastX", aimDir.x);
+                anim.SetFloat("lastY", aimDir.y);
+            }
            Attack();
         }
     }
