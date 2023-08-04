@@ -8,15 +8,13 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Animator anim;
     private Vector2 moveDirection;
-    public float attackRange = 2f; // The attack range of the player
-    public LayerMask enemyLayerMask; // The layer mask for enemy detection
-    public GameObject bulletPrefab; // The prefab for the bullet
-    public Transform firePoint; // The position from where bullets will be spawned
-    public float bulletSpeed = 10f; // The speed of the bullet
-    public float timeBetweenShots = 0.5f; // Time delay between consecutive shots
-    public float bulletLifetime = 2f; // The time after which the bullet will be destroyed
+    public float attackRange = 2f;
+    public LayerMask enemyLayerMask;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float timeBetweenShots = 0.5f;
 
-    private float lastShotTime; // The time when the last shot was fired
+    private float lastShotTime;
 
     // Start is called before the first frame update
     void Start()
@@ -45,27 +43,15 @@ public class PlayerController : MonoBehaviour
         }
 
         //Check attack range
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time - lastShotTime >= timeBetweenShots)
         {
-            // Get the direction towards the cursor
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 aimDir = mousePosition - transform.position;
-            aimDir.z = 0f;
-
-            // Update the player's rotation to face the cursor
-            if (aimDir != Vector3.zero)
-            {
-                float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                anim.SetFloat("lastX", aimDir.x);
-                anim.SetFloat("lastY", aimDir.y);
-            }
-           Attack();
+            Attack();
         }
     }
 
-    private void Attack(){
-         // Cast a ray from the camera to the mouse position on the screen
+    private void Attack()
+    {
+        // Cast a ray from the camera to the mouse position on the screen
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, enemyLayerMask);
 
@@ -78,11 +64,20 @@ public class PlayerController : MonoBehaviour
             // Check if the enemy is within attack range
             if (distanceToEnemy <= attackRange)
             {
-                // Check for user input to shoot
-                if (Input.GetButtonDown("Fire1") && Time.time - lastShotTime >= timeBetweenShots)
+                // Get the direction towards the cursor
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 aimDir = mousePosition - transform.position;
+                aimDir.z = 0f;
+
+                // Update the player's rotation to face the cursor
+                if (aimDir != Vector3.zero)
                 {
-                    Shoot();
+                    float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                    anim.SetFloat("lastX", aimDir.x);
+                    anim.SetFloat("lastY", aimDir.y);
                 }
+                Shoot();
             }
         }
     }
@@ -93,18 +88,13 @@ public class PlayerController : MonoBehaviour
         // Instantiate the bullet prefab at the firePoint position and rotation
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-        // Get the Rigidbody2D component of the bullet and apply force to move it forward
-        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-        bulletRigidbody.velocity = firePoint.up * bulletSpeed;
-
-        Destroy(bullet,bulletLifetime);
-
         // Record the time when the bullet was shot for time delay between shots
         lastShotTime = Time.time;
 
     }
 
-    private void checkAnimation(Rigidbody2D rb){
+    private void checkAnimation(Rigidbody2D rb)
+    {
         anim.SetFloat("moveX", rb.velocity.x);
         anim.SetFloat("moveY", rb.velocity.y);
 

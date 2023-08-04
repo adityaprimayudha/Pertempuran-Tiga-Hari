@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float attackRange = 2f; 
-    public int maxHealth = 100; 
-
-    private Transform player; 
-    private int currentHealth; 
+    public float attackRange = 2f;
+    private Transform player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        currentHealth = maxHealth;
     }
 
     void Update()
@@ -22,17 +18,6 @@ public class EnemyController : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             Debug.Log("Enemy Attack!");
-        }
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        currentHealth -= damageAmount;
-
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Enemy Defeated!");
-            Destroy(gameObject);
         }
     }
 }
