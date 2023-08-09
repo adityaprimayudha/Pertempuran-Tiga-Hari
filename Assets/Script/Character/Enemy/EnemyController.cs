@@ -11,40 +11,53 @@ public class EnemyController : MonoBehaviour
     public Transform firePoint;
     public float timeBetweenShots = 1f;
     private float lastShotTime;
-    private bool isChasing;
     public float moveSpeed = 5f;
     private Vector2 direction;
     private float angle;
+    private Rigidbody2D rb;
+    private float distanceToPlayer;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponentInParent<Rigidbody2D>();
     }
 
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        // if (DialogueManager.GetInstance().IsDialoguePlaying)
+        // {
+        //     return;
+        // }
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= chaseRange)
         {
             changeDirection();
-            transform.rotation = Quaternion.AngleAxis(angle, transform.forward);
-
-            // Check if the player is outside the attack range
-            if (distanceToPlayer > attackRange)
-            {
-                transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
-            }
-            else
-            {
-                if (Time.time - lastShotTime >= timeBetweenShots)
-                {
-                    AttackPlayer();
-                }
-            }
+            firePoint.transform.rotation = Quaternion.AngleAxis(angle, transform.forward);
         }
         else
         {
+            direction = Vector2.zero;
+        }
+    }
 
+    private void FixedUpdate()
+    {
+        // if (DialogueManager.GetInstance().IsDialoguePlaying)
+        // {
+        //     return;
+        // }
+        // Check if the player is outside the attack range
+        if (distanceToPlayer > attackRange)
+        {
+            rb.MovePosition(direction * moveSpeed * Time.fixedDeltaTime + rb.position);
+        }
+        else
+        {
+            if (Time.time - lastShotTime >= timeBetweenShots)
+            {
+                AttackPlayer();
+            }
         }
     }
     private void AttackPlayer()
@@ -58,5 +71,13 @@ public class EnemyController : MonoBehaviour
     {
         direction = (player.position - transform.position).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    }
+
+    public void OnStop(bool stop)
+    {
+
+        rb.velocity = Vector2.zero;
+        this.GetComponent<EnemyController>().enabled = stop;
+
     }
 }
