@@ -5,16 +5,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float speed;
-    public Animator anim;
+    private Rigidbody2D rb;
+    [SerializeField] private float speed;
+    [SerializeField] private Animator anim;
     private Vector2 moveDirection;
-    public float attackRange = 2f;
-    public LayerMask enemyLayerMask;
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-    public float timeBetweenShots = 0.5f;
+    [SerializeField] private float attackRange = 2f;
+    [SerializeField] private LayerMask enemyLayerMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private float timeBetweenShots = 0.5f;
     private float lastShotTime;
+
+    private void Start()
+    {
+        rb = GetComponentInParent<Rigidbody2D>();
+    }
 
     private void FixedUpdate()
     {
@@ -70,7 +75,7 @@ public class PlayerController : MonoBehaviour
                     if (aimDir != Vector3.zero)
                     {
                         float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
-                        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                        firePoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                         anim.SetFloat("lastX", aimDir.x);
                         anim.SetFloat("lastY", aimDir.y);
                     }
@@ -108,6 +113,8 @@ public class PlayerController : MonoBehaviour
     public void OnStop(bool stop)
     {
         rb.velocity = Vector2.zero;
+        anim.SetFloat("moveY", 0);
+        anim.SetFloat("moveX", 0);
         anim.SetFloat("lastX", 0);
         anim.SetFloat("lastY", 0);
         this.GetComponent<PlayerController>().enabled = stop;

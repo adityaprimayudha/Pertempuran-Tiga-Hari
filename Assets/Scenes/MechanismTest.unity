@@ -3318,6 +3318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146796974651626549, guid: 7331aed8446b80f4ab2f301e2bab2ffe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 937865530517870456, guid: 7331aed8446b80f4ab2f301e2bab2ffe, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4283,6 +4287,14 @@ PrefabInstance:
     - target: {fileID: 7537971822064697977, guid: 1cda8f299f1fa7d478d8a2733d1096d0, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981526828573531549, guid: 1cda8f299f1fa7d478d8a2733d1096d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.513973
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981526828573531549, guid: 1cda8f299f1fa7d478d8a2733d1096d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88583
       objectReference: {fileID: 0}
     - target: {fileID: 7984066121696924311, guid: 1cda8f299f1fa7d478d8a2733d1096d0, type: 3}
       propertyPath: m_BoundingShape2D
