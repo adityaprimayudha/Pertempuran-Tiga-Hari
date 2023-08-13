@@ -221,13 +221,41 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: hasDone
+      value: IndoorEvent
       type: 0
       typeString: 
     - title: Initial Value
-      value: unassigned
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Mengatur cutscene pertama kali bermain
       type: 0
-      typeString: CustomFieldType_QuestState
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: OutdoorEvent
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Mengatur cutscene pertama kali pemain keluar rumah
+      type: 0
+      typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: New Variable 5
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     - title: Description
       value: 
       type: 0
@@ -501,12 +529,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 81.315796
-        y: 289.05264
+        y: 290.3684
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 13.761475, y: 31.07016}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7600002
   - id: 2
     fields:
     - title: Title
@@ -605,7 +633,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 80
-        y: 50
+        y: 49
         width: 160
         height: 30
     - id: 1
@@ -976,7 +1004,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 91.54626}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.06
   - id: 4
     fields:
@@ -1136,7 +1164,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["IndoorEvent"] = false
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1460,8 +1488,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 40.994286, y: 33.005386}
+    canvasZoom: 1.03
   syncInfo:
     syncActors: 0
     syncItems: 0

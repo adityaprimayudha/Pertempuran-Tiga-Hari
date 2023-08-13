@@ -117,6 +117,14 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("moveX", 0);
         anim.SetFloat("lastX", 0);
         anim.SetFloat("lastY", 0);
+        if (stop)
+        {
+            Debug.Log("Jalan");
+        }
+        else
+        {
+            Debug.Log("Stop");
+        }
         this.GetComponent<PlayerController>().enabled = stop;
     }
 
