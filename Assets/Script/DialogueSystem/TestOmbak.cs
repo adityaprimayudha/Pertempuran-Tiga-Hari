@@ -8,6 +8,7 @@ public class TestOmbak : MonoBehaviour
 {
     private bool isKeluar;
     public string nextScene;
+    public string unloadScene;
     // Update is called once per frame
     void Update()
     {

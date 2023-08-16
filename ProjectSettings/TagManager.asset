@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Curtain
   - Timeline
+  - Confiner
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
@@ -41,14 +43,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2192034123
     locked: 0
   - name: Foreground
     uniqueID: 4086542513
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Props
     uniqueID: 757131837

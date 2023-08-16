@@ -246,6 +246,20 @@ MonoBehaviour:
       value: Mengatur cutscene pertama kali pemain keluar rumah
       type: 0
       typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: InCutscene
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Mengatur spawn point player ketika in cutscene
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:

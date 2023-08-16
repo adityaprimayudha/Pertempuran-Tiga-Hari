@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outdoor.unity
     guid: e535c93755afcd644a6d4fec902fccd0
+  - enabled: 1
+    path: Assets/Scenes/Pelabuhan.unity
+    guid: 7c8b1964ecf8af64eb11960ec33cd1ee
   m_configObjects: {}
