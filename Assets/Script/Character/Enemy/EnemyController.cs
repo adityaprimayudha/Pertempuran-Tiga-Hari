@@ -16,11 +16,14 @@ public class EnemyController : MonoBehaviour
     private float angle;
     private Rigidbody2D rb;
     private float distanceToPlayer;
+    [SerializeField] private GameObject canvas;
+    private Animator anim;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponentInParent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -50,7 +53,7 @@ public class EnemyController : MonoBehaviour
         // Check if the player is outside the attack range
         if (distanceToPlayer > attackRange)
         {
-            rb.MovePosition(direction * moveSpeed * Time.fixedDeltaTime + rb.position);
+            rb.MovePosition(moveSpeed * Time.fixedDeltaTime * direction + rb.position);
         }
         else
         {
@@ -73,11 +76,17 @@ public class EnemyController : MonoBehaviour
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
 
+
     public void OnStop(bool stop)
     {
 
         rb.velocity = Vector2.zero;
         this.GetComponent<EnemyController>().enabled = stop;
 
+    }
+
+    public void Defeated()
+    {
+        canvas.SetActive(false);
     }
 }

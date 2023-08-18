@@ -6,6 +6,7 @@ public class HealthBarSystem : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
+    [SerializeField] private string whatAmI;
 
     public HealthBar healthBar;
 
@@ -23,7 +24,14 @@ public class HealthBarSystem : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Character Defeated!");
+            if (whatAmI == "Player")
+            {
+                Debug.Log("Game Over");
+            }
+            else if (whatAmI == "Enemy")
+            {
+                this.gameObject.GetComponentInParent<EnemyController>().Defeated();
+            }
         }
     }
 

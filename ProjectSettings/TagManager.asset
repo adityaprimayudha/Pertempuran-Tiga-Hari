@@ -9,6 +9,8 @@ TagManager:
   - Timeline
   - Confiner
   - PlayerSpawn
+  - Objective
+  - HealthBar
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
-  - 
+  - Layer A
+  - Layer B
   - 
   - 
   - 

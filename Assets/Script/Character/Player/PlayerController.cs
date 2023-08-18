@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using PixelCrushers;
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
         if (moveDirection != Vector2.zero)
         {
             float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            firePoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 
