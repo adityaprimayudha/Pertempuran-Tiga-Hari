@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
-using UnityEditor.Animations;
 using UnityEngine.SceneManagement;
+
 
 public class SwitchMode : MonoBehaviour
 {
     [SerializeField] private Sprite spriteCasual;
     [SerializeField] private Sprite spriteBattle;
-    [SerializeField] private AnimatorController animatorCasual;
-    [SerializeField] private AnimatorController animatorBattle;
+    [SerializeField] private RuntimeAnimatorController animatorCasual;
+    [SerializeField] private RuntimeAnimatorController animatorBattle;
     [SerializeField] private GameObject healthBar;
     void OnEnable()
     {
