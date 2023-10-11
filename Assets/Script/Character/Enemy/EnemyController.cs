@@ -18,12 +18,16 @@ public class EnemyController : MonoBehaviour
     private float distanceToPlayer;
     [SerializeField] private GameObject canvas;
     private Animator anim;
+    private Vector2 previousPos;
+    private Vector2 lastVelocity;
+    private Vector2 velocity;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponentInParent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        previousPos = rb.position;
     }
 
     void Update()
@@ -35,7 +39,7 @@ public class EnemyController : MonoBehaviour
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= chaseRange)
         {
-            changeDirection();
+            ChangeDirection();
             firePoint.transform.rotation = Quaternion.AngleAxis(angle, transform.forward);
         }
         else
@@ -53,12 +57,16 @@ public class EnemyController : MonoBehaviour
         // Check if the player is outside the attack range
         if (distanceToPlayer > attackRange)
         {
+            CheckVelocityAndAnimation();
             rb.MovePosition(moveSpeed * Time.fixedDeltaTime * direction + rb.position);
         }
         else
         {
             if (Time.time - lastShotTime >= timeBetweenShots)
             {
+                CheckVelocityAndAnimation();
+                anim.SetFloat("lastX", lastVelocity.x);
+                anim.SetFloat("lastY", lastVelocity.y);
                 AttackPlayer();
             }
         }
@@ -70,12 +78,27 @@ public class EnemyController : MonoBehaviour
         Debug.Log("ATTACK!");
     }
 
-    private void changeDirection()
+    private void ChangeDirection()
     {
         direction = (player.position - transform.position).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        anim.SetFloat("lastX", direction.x);
+        anim.SetFloat("lastY", direction.y);
     }
+    private void CheckVelocityAndAnimation()
+    {
+        velocity = (rb.position - previousPos) / Time.fixedDeltaTime;
+        previousPos = rb.position;
 
+        // Normalize the velocity to get the direction
+        Vector2 normalizedVelocity = velocity.normalized;
+        lastVelocity = normalizedVelocity;
+
+        // Update the Animator parameter for direction
+        anim.SetFloat("moveX", normalizedVelocity.x);
+        anim.SetFloat("moveY", normalizedVelocity.y);
+
+    }
 
     public void OnStop(bool stop)
     {

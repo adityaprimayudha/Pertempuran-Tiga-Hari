@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         Vector2 move = InputManager.GetInstance().GetMoveValue();
         rb.velocity = move * speed;
 
-        CheckAnimation(rb);
+        CheckAnimation();
 
         moveDirection = move.normalized;
 
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void CheckAnimation(Rigidbody2D rb)
+    private void CheckAnimation()
     {
 
         anim.SetFloat("moveX", rb.velocity.x);
