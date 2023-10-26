@@ -11,7 +11,9 @@ public class SwitchMode : MonoBehaviour
     [SerializeField] private Sprite spriteBattle;
     [SerializeField] private RuntimeAnimatorController animatorCasual;
     [SerializeField] private RuntimeAnimatorController animatorBattle;
+    [SerializeField] private GameObject player;
     [SerializeField] private GameObject healthBar;
+
     void OnEnable()
     {
         Lua.RegisterFunction(nameof(SwitchToCasual), this, SymbolExtensions.GetMethodInfo(() => SwitchToCasual()));
@@ -22,8 +24,8 @@ public class SwitchMode : MonoBehaviour
 
     public void SwitchToCasual()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteCasual;
-        this.gameObject.GetComponent<Animator>().runtimeAnimatorController = animatorCasual;
+        player.GetComponent<SpriteRenderer>().sprite = spriteCasual;
+        player.GetComponent<Animator>().runtimeAnimatorController = animatorCasual;
         if (healthBar != null)
         {
             healthBar.SetActive(false);
@@ -32,8 +34,8 @@ public class SwitchMode : MonoBehaviour
 
     public void SwitchToBattle()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteBattle;
-        this.gameObject.GetComponent<Animator>().runtimeAnimatorController = animatorBattle;
+        player.GetComponent<SpriteRenderer>().sprite = spriteBattle;
+        player.GetComponent<Animator>().runtimeAnimatorController = animatorBattle;
         if (healthBar != null)
         {
             healthBar.SetActive(true);

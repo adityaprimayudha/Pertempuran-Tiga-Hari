@@ -7,12 +7,14 @@ public class LoadScene : MonoBehaviour
 {
     public string sceneName;
     public float fadeDuration = 1.0f;
-    private CanvasGroup canvasGroup;
+    [SerializeField] private CanvasGroup canvasGroup;
 
     private void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
-        StartCoroutine(FadeOutEffect());
+        if (canvasGroup != null)
+        {
+            StartCoroutine(FadeOutEffect());
+        }
     }
 
     private IEnumerator FadeOutEffect()
@@ -31,6 +33,10 @@ public class LoadScene : MonoBehaviour
         canvasGroup.alpha = targetAlpha;
 
         // Setelah fade out, pindah ke scene selanjutnya
+        SceneManager.LoadScene(sceneName);
+    }
+    public void LoadSceneByName(string sceneName)
+    {
         SceneManager.LoadScene(sceneName);
     }
 }

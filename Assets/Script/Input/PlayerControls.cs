@@ -62,6 +62,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""cfd86b73-b7d7-4d2b-a41e-98e0c73d29da"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -207,6 +216,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0df63921-f250-415f-9351-0d098d7ecd3b"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +239,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Basic_Interaction = m_Basic.FindAction("Interaction", throwIfNotFound: true);
         m_Basic_Attack = m_Basic.FindAction("Attack", throwIfNotFound: true);
         m_Basic_Submit = m_Basic.FindAction("Submit", throwIfNotFound: true);
+        m_Basic_Pause = m_Basic.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,6 +305,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Basic_Interaction;
     private readonly InputAction m_Basic_Attack;
     private readonly InputAction m_Basic_Submit;
+    private readonly InputAction m_Basic_Pause;
     public struct BasicActions
     {
         private @PlayerControls m_Wrapper;
@@ -292,6 +314,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Interaction => m_Wrapper.m_Basic_Interaction;
         public InputAction @Attack => m_Wrapper.m_Basic_Attack;
         public InputAction @Submit => m_Wrapper.m_Basic_Submit;
+        public InputAction @Pause => m_Wrapper.m_Basic_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Basic; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +336,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Submit.started += instance.OnSubmit;
             @Submit.performed += instance.OnSubmit;
             @Submit.canceled += instance.OnSubmit;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IBasicActions instance)
@@ -329,6 +355,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Submit.started -= instance.OnSubmit;
             @Submit.performed -= instance.OnSubmit;
             @Submit.canceled -= instance.OnSubmit;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IBasicActions instance)
@@ -352,5 +381,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnInteraction(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

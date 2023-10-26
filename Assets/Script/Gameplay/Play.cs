@@ -10,7 +10,7 @@ public class Play : MonoBehaviour
     private EnemyController[] control;
     private Shoot[] shoot;
 
-    void Awake()
+    void Start()
     {
         control = enemyObjects.GetComponentsInChildren<EnemyController>();
         shoot = npc.GetComponentsInChildren<Shoot>();
@@ -20,6 +20,12 @@ public class Play : MonoBehaviour
     {
         Lua.RegisterFunction(nameof(DisableEnemy), this, SymbolExtensions.GetMethodInfo(() => DisableEnemy()));
         Lua.RegisterFunction(nameof(EnableEnemy), this, SymbolExtensions.GetMethodInfo(() => EnableEnemy()));
+    }
+
+    private void OnDisable()
+    {
+        Lua.UnregisterFunction(nameof(DisableEnemy));
+        Lua.UnregisterFunction(nameof(EnableEnemy));
     }
 
     public void DisableEnemy()

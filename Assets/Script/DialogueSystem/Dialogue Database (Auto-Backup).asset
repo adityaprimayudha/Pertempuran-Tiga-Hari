@@ -235,7 +235,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: New Quest 1
+      value: Menuju Pelabuhan
       type: 0
       typeString: 
     - title: Pictures
@@ -243,7 +243,132 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
+      value: Joko bangun tidur pagi dan teringat janjian dengan teman-temannya. Mereka
+        berjanji pergi ke pelabuhan bersama.
+      type: 0
+      typeString: 
+    - title: Success Description
       value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: 
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 2
+    fields:
+    - title: Name
+      value: Cari Objective
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Joko dan teman-temannya sampai di Pelabuhan dan terheran-heran dengan
+        keramaian yang ada. Cari petunjuk untuk memahami situasi.
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: 
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 3
+    fields:
+    - title: Name
+      value: Menuju Balai Kota
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Setelah melihat pesawat yang menyebarkan selebaran mengelilingi langit
+        Surabaya. Joko menuju Balai Kota untuk melihatnya lebih jelas.
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 4
+    fields:
+    - title: Name
+      value: Lakukan Penyerbuan
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Setelah tahu akan ultimatum yang diberikan oleh Pasukan Inggris. Joko
+        dan pejuang lainnya berencana melakukan penyerbuan di kemudian hari.
+      type: 0
+      typeString: 
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: 
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 5
+    fields:
+    - title: Name
+      value: Hancurkan Penjajah
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Gencatan senjata yang diumumkan tidak jadi. Pasukan Sekutu menembakkan
+        senjata api ke kerumunan pejuang Surabaya.
       type: 0
       typeString: 
     - title: Success Description
@@ -652,7 +777,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Menuju Pelabuhan", "active");
+
+        GetQuests();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1597,7 +1724,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetEnabled(PlayerController,true,PlayerMovement)
+        value: 'SetEnabled(PlayerController,true,PlayerMovement);
+
+          SetActive(Timeline,false);'
         type: 0
         typeString: 
       conversationID: 4
@@ -1874,7 +2003,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SwitchToCasual();
+      userScript: 'SwitchToCasual();
+
+        SetQuestState("Menuju Pelabuhan", "success");
+
+        SetQuestState("Cari
+        Objective", "active");
+
+        GetQuests();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2697,7 +2833,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Cari Objective", "success");
+
+        SetQuestState("Menuju
+        Balai Kota", "active");
+
+        GetQuests()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2849,7 +2990,9 @@ MonoBehaviour:
           SetActive(Basic
           Standard UI Selector Elements,true);
 
-          StopConversation();'
+          StopConversation();
+
+          SetActive(Timeline2,false);'
         type: 0
         typeString: 
       conversationID: 7
@@ -2872,8 +3015,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 121.362144, y: 114.9067}
-    canvasZoom: 0.7000002
+    canvasScrollPosition: {x: 0, y: 230.15302}
+    canvasZoom: 1.2399998
   - id: 8
     fields:
     - title: Title
@@ -3472,7 +3615,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["keluarRumah"] = true
+      userScript: 'Variable["keluarRumah"] = true;
+
+        SetQuestState("Menuju
+        Balai Kota", "success");
+
+        SetQuestState("Lakukan Penyerbuan", "active");
+
+        GetQuests()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3483,8 +3633,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 27.436234, y: 212.8643}
-    canvasZoom: 1.18
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.76000035
   - id: 9
     fields:
     - title: Title
@@ -3613,7 +3763,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Fade(In,2);
+        value: 'SetEnabled(PositionSaver,false,MC);
+
+          Fade(In,2);
 
           Continue()@2;'
         type: 0
@@ -4389,7 +4541,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetEnabled(PositionSaver,true,MC)
         type: 0
         typeString: 
       conversationID: 10
@@ -4401,7 +4553,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: NextScene("GedungInternatio");
+      userScript: 'NextScene("GedungInternatio");
+
+        SetQuestState("Lakukan
+        Penyerbuan", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4412,8 +4567,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 0, y: 19.890823}
+    canvasZoom: 0.8200002
   - id: 11
     fields:
     - title: Title
@@ -4766,7 +4921,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: EnableEnemy();
+      userScript: 'EnableEnemy();
+
+        SetQuestState("Hancurkan Penjajah", "active");
+
+        GetQuests()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []

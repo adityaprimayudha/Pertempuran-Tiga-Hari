@@ -163,5 +163,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   bulletLifetime: 2
-  damageAmount: 20
+  damageAmount: 10
   tag: Player

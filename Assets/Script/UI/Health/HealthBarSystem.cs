@@ -7,6 +7,7 @@ public class HealthBarSystem : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
     [SerializeField] private string whatAmI;
+    [SerializeField] private GameObject gameOverPanel;
 
     public HealthBar healthBar;
 
@@ -26,13 +27,20 @@ public class HealthBarSystem : MonoBehaviour
         {
             if (whatAmI == "Player")
             {
-                Debug.Log("Game Over");
+                gameOverPanel.SetActive(true);
+                Time.timeScale = 0;
             }
             else if (whatAmI == "Enemy")
             {
                 this.gameObject.GetComponentInParent<EnemyController>().Defeated();
             }
         }
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        UpdateHealthBar();
     }
 
     private void UpdateHealthBar()

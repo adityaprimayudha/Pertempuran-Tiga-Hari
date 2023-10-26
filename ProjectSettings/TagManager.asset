@@ -11,6 +11,9 @@ TagManager:
   - PlayerSpawn
   - Objective
   - HealthBar
+  - PlayerVisual
+  - EnemyObjects
+  - PejuangObjects
   layers:
   - Default
   - TransparentFX

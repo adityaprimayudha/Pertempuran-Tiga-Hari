@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using System.Collections.Generic;
 using System;
+using System.IO;
 
 namespace PixelCrushers
 {
@@ -79,6 +80,7 @@ namespace PixelCrushers
             if (GUI.Button(showRect, "Show"))
             {
                 Debug.Log(key + ": " + PlayerPrefs.GetString(key));
+                File.WriteAllText(Application.persistentDataPath + "/saved.json", PlayerPrefs.GetString(key));
             }
             EditorGUI.EndDisabledGroup();
         }
