@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GedungInternatio.unity
     guid: 9799e661a4ca200489a47080f1a6143b
+  - enabled: 1
+    path: Assets/Scenes/Summary.unity
+    guid: c5dd7c825145e604b997577b9c9a66e6
   m_configObjects: {}

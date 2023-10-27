@@ -1316,6 +1316,7 @@ GameObject:
   - component: {fileID: 3352463354631770789}
   - component: {fileID: 6831950006123258085}
   - component: {fileID: 1225290002581274349}
+  - component: {fileID: 7261583284866146003}
   m_Layer: 0
   m_Name: SAVE
   m_TagString: Untagged
@@ -1425,21 +1426,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1225290002581274349}
-        m_TargetAssemblyTypeName: PixelCrushers.SaveSystemMethods, Assembly-CSharp-firstpass
-        m_MethodName: SaveSlot
-        m_Mode: 3
+      - m_Target: {fileID: 2440554541288705119}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Unpause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2440554541288705119}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: Unpause
+      - m_Target: {fileID: 7261583284866146003}
+        m_TargetAssemblyTypeName: SaveAndLoadMode, Assembly-CSharp
+        m_MethodName: SaveType
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1462,6 +1463,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultStartingSceneName: 
+--- !u!114 &7261583284866146003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564507607147187934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edf60088742f2f468af73efd4d6f655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449372327056648030
 GameObject:
   m_ObjectHideFlags: 0

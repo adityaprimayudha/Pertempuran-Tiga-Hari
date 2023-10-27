@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,23 @@ public class LoadScene : MonoBehaviour
         if (canvasGroup != null)
         {
             StartCoroutine(FadeOutEffect());
+        }
+    }
+
+    private void CheckStatus()
+    {
+        if (File.Exists(Application.persistentDataPath + "/prequelstatus.json"))
+        {
+            string json = File.ReadAllText(Application.persistentDataPath + "/prequelstatus.json");
+            PrequelStatus prequelStatus = JsonUtility.FromJson<PrequelStatus>(json);
+            if (prequelStatus.status == PrequelGameStatus.belum)
+            {
+                SceneManager.LoadScene("Summary");
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneName);
+            }
         }
     }
 
@@ -33,7 +51,7 @@ public class LoadScene : MonoBehaviour
         canvasGroup.alpha = targetAlpha;
 
         // Setelah fade out, pindah ke scene selanjutnya
-        SceneManager.LoadScene(sceneName);
+        CheckStatus();
     }
     public void LoadSceneByName(string sceneName)
     {
