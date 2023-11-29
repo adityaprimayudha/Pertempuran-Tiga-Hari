@@ -7,6 +7,7 @@ public class CheckEnemiesCount : MonoBehaviour
 {
     [SerializeField] private GameObject timeline;
     [SerializeField] private GameObject curtain;
+    [SerializeField] private GameObject pejuang;
     void Update()
     {
         if (this.gameObject.GetComponentsInChildren<Transform>().Length == 1)
@@ -18,10 +19,11 @@ public class CheckEnemiesCount : MonoBehaviour
                 Debug.Log("Curtain");
             }
             this.gameObject.SetActive(false);
+            pejuang.SetActive(false);
         }
         else
         {
-            Debug.Log("Children = " + this.gameObject.GetComponentsInChildren<Transform>().Length);
+            //Debug.Log("Children = " + this.gameObject.GetComponentsInChildren<Transform>().Length);
         }
     }
 }

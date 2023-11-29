@@ -30,6 +30,7 @@ public class BGMManager : MonoBehaviour
             Destroy(gameObject);
         }
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("BGMVolume", 1f);
     }
     public void PlayBGMMenu()
     {
@@ -73,8 +74,8 @@ public class BGMManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
     }
-    public void MuteBGM()
+    public void SetBGMVolume(float volume)
     {
-        audioSource.mute = !audioSource.mute;
+        audioSource.volume = volume;
     }
 }

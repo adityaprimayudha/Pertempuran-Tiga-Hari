@@ -201,7 +201,7 @@ MonoBehaviour:
       allowPCSubtitleReminders: 0
       skipPCSubtitleAfterResponseMenu: 1
       subtitleCharsPerSecond: 20
-      minSubtitleSeconds: 1
+      minSubtitleSeconds: 4
       continueButton: 2
       requireContinueOnLastLine: 0
       richTextEmphases: 1

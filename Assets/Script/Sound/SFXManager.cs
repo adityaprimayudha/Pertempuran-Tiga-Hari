@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SFXManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SFXManager : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioClip ButtonStart;
     [SerializeField] private AudioClip ButtonClick;
+    [SerializeField] private AudioClip GunShot;
     private AudioSource audioSource;
 
     private void Awake()
@@ -22,6 +24,7 @@ public class SFXManager : MonoBehaviour
             Destroy(gameObject);
         }
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1f);
     }
 
     public void StartButton()
@@ -36,8 +39,15 @@ public class SFXManager : MonoBehaviour
         audioSource.loop = false;
         audioSource.Play();
     }
-    public void MuteSFX()
+
+    public void GunShotSound()
     {
-        audioSource.mute = !audioSource.mute;
+        audioSource.clip = GunShot;
+        audioSource.loop = false;
+        audioSource.Play();
+    }
+    public void SetSFXVolume(float volume)
+    {
+        audioSource.volume = volume;
     }
 }

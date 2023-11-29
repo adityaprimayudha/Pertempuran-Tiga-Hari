@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
     {
         GameObject bullet = Instantiate(enemyBulletPrefab, firePoint.position, firePoint.rotation);
         lastShotTime = Time.time;
-        Debug.Log("ATTACK!");
+        SFXManager.Instance.GunShotSound();
     }
 
     private void ChangeDirection()

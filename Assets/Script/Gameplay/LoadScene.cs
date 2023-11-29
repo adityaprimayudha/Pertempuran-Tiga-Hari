@@ -24,7 +24,7 @@ public class LoadScene : MonoBehaviour
         {
             string json = File.ReadAllText(Application.persistentDataPath + "/prequelstatus.json");
             PrequelStatus prequelStatus = JsonUtility.FromJson<PrequelStatus>(json);
-            if (prequelStatus.status == PrequelGameStatus.belum)
+            if (prequelStatus.status == PrequelGameStatus.selesai)
             {
                 SceneManager.LoadScene("Summary");
             }

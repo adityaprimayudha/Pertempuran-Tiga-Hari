@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
         // Record the time when the bullet was shot for time delay between shots
         lastShotTime = Time.time;
-
+        SFXManager.Instance.GunShotSound();
     }
 
     private void CheckAnimation()

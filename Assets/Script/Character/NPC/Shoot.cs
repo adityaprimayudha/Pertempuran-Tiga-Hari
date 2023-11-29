@@ -24,5 +24,6 @@ public class Shoot : MonoBehaviour
         bullet.GetComponent<SpriteRenderer>().color = Color.green;
         bullet.transform.position = transform.position;
         lastShotTime = Time.time;
+        SFXManager.Instance.GunShotSound();
     }
 }

@@ -19,7 +19,7 @@ public class PrequelStatusAlert : MonoBehaviour
             }
             else
             {
-                _alertText.text = "Prequel Status!\n<color=white>Selamat kamu sudah menyelesaikan game-game Sebelumnya";
+                _alertText.text = "Prequel Status!\n<color=white>Selamat kamu sudah menyelesaikan game-game Sebelumnya\nRingkasan cerita akan ditampilkan di awal game";
             }
         }
     }
