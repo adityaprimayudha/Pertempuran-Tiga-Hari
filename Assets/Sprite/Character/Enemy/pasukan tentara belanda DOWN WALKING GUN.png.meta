@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 5e9fca88bbfe09a49a3c2509504401d3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227c218c5c6a98a4688b531871b06c4e
+      internalID: -1514870426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dde27385e4b2174ea98a3fc172b3ae3
+      internalID: 635289039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_2
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1acdcd74eba584f9b2ca6ff6fb96d5
+      internalID: -1092605361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_3
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041b1945379156d4d942fb9de9cda15b
+      internalID: -589219172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_4
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c357d1ac011114c98aed6761a6a42d
+      internalID: 1696930522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_5
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ced63bbd2a374a4eb31a08b68ad2a6c
+      internalID: -516734776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_6
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955f485ffd2cce340a0f9b27a058cd0b
+      internalID: 1039804928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_7
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363b361bba3d1fa4d9f2493ab1177a4a
+      internalID: 1860402358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_8
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91451ba2509db6640a870f64222caf86
+      internalID: 1267019458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_9
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d558c8f4948c334fbe6606d250624a8
+      internalID: 1858594890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_10
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43888b49bbb41149adfa0194a5cabbb
+      internalID: -83895359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_11
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31d5dc2ff97e414a90d7d93b9acf760
+      internalID: 566279816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_12
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f692d2de2953b45bc74308a1b72233
+      internalID: -91211501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_13
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6550f4bb18a54144ace79c022ecd47a
+      internalID: -1467432594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_14
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ce54495aa3d4142a43eb0ee0beb923
+      internalID: -344347336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_15
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba633610bb6df443a26b0ba8a0edf08
+      internalID: 413447166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_16
+      rect:
+        serializedVersion: 2
+        x: 2864
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c1981cf87a4d64383162c4899ba4e1
+      internalID: 145495162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_17
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa4972b5c2d91e44a257b2b37ada7f0
+      internalID: 1577088883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_18
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed01d2537e831bd4d929a2e47347a811
+      internalID: -2098717369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasukan tentara belanda DOWN WALKING GUN_19
+      rect:
+        serializedVersion: 2
+        x: 3401
+        y: 0
+        width: 179
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30444eb3cfd6b34ca7069fdd1630ab7
+      internalID: -1082395264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pasukan tentara belanda DOWN WALKING GUN_0: -1514870426
+      pasukan tentara belanda DOWN WALKING GUN_1: 635289039
+      pasukan tentara belanda DOWN WALKING GUN_10: -83895359
+      pasukan tentara belanda DOWN WALKING GUN_11: 566279816
+      pasukan tentara belanda DOWN WALKING GUN_12: -91211501
+      pasukan tentara belanda DOWN WALKING GUN_13: -1467432594
+      pasukan tentara belanda DOWN WALKING GUN_14: -344347336
+      pasukan tentara belanda DOWN WALKING GUN_15: 413447166
+      pasukan tentara belanda DOWN WALKING GUN_16: 145495162
+      pasukan tentara belanda DOWN WALKING GUN_17: 1577088883
+      pasukan tentara belanda DOWN WALKING GUN_18: -2098717369
+      pasukan tentara belanda DOWN WALKING GUN_19: -1082395264
+      pasukan tentara belanda DOWN WALKING GUN_2: -1092605361
+      pasukan tentara belanda DOWN WALKING GUN_3: -589219172
+      pasukan tentara belanda DOWN WALKING GUN_4: 1696930522
+      pasukan tentara belanda DOWN WALKING GUN_5: -516734776
+      pasukan tentara belanda DOWN WALKING GUN_6: 1039804928
+      pasukan tentara belanda DOWN WALKING GUN_7: 1860402358
+      pasukan tentara belanda DOWN WALKING GUN_8: 1267019458
+      pasukan tentara belanda DOWN WALKING GUN_9: 1858594890
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

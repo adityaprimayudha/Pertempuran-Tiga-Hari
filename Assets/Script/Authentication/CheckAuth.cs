@@ -14,7 +14,7 @@ public class CheckAuth : MonoBehaviour
     [SerializeField] private Button _loadButton;
     private string json;
     private LogStatus logStatus;
-    [SerializeField] private PlayerPrefsSavedGameDataStorer _playerPrefsSavedGameDataStorer;
+    [SerializeField] private PlayerPrefsSavedGameDataStorer _playerPrefs;
 
     private void Awake()
     {
@@ -36,9 +36,9 @@ public class CheckAuth : MonoBehaviour
 
     public void CheckSaveData()
     {
-        if (_playerPrefsSavedGameDataStorer == null)
+        if (_playerPrefs == null)
         {
-            _playerPrefsSavedGameDataStorer = FindObjectOfType<PlayerPrefsSavedGameDataStorer>();
+            _playerPrefs = FindObjectOfType<PlayerPrefsSavedGameDataStorer>();
         }
         if (File.Exists(Application.persistentDataPath + "/logstatus.json"))
         {
@@ -46,17 +46,17 @@ public class CheckAuth : MonoBehaviour
             logStatus = JsonUtility.FromJson<LogStatus>(json);
             if (logStatus.status == "login")
             {
-                _playerPrefsSavedGameDataStorer.playerPrefsKeyBase = logStatus.username;
-                Debug.Log("Key: " + _playerPrefsSavedGameDataStorer.playerPrefsKeyBase);
+                _playerPrefs.playerPrefsKeyBase = logStatus.username;
+                Debug.Log("Key: " + _playerPrefs.playerPrefsKeyBase);
             }
             else
             {
-                _playerPrefsSavedGameDataStorer.playerPrefsKeyBase = "Save";
+                _playerPrefs.playerPrefsKeyBase = "Save";
             }
         }
         else
         {
-            _playerPrefsSavedGameDataStorer.playerPrefsKeyBase = "Save";
+            _playerPrefs.playerPrefsKeyBase = "Save";
         }
     }
 

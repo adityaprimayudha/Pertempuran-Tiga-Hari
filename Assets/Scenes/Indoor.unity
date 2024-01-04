@@ -9627,6 +9627,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2638268977516982233, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1268510588, guid: ed8cd21d843114a4786a12f62e94845a, type: 3}
     - target: {fileID: 3223551666387190180, guid: f67678e771820074e83604740d01e7fd, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9646,6 +9650,30 @@ PrefabInstance:
     - target: {fileID: 4850123032370139373, guid: f67678e771820074e83604740d01e7fd, type: 3}
       propertyPath: standardDialogueUISettings.subtitlePanelNumber
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7295208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5377632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00064229965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02944392
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9222222
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238988418077097574, guid: f67678e771820074e83604740d01e7fd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5760635
       objectReference: {fileID: 0}
     - target: {fileID: 5622691420548953915, guid: f67678e771820074e83604740d01e7fd, type: 3}
       propertyPath: m_LocalPosition.x

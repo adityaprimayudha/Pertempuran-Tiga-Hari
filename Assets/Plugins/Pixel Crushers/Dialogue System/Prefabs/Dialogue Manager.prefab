@@ -428,7 +428,7 @@ MonoBehaviour:
   spriteCasual: {fileID: 1261560803, guid: 484aca13a12d18f45928ea4332edfb6a, type: 3}
   spriteBattle: {fileID: 680239900, guid: a0fa867ccfa849248a76457ead71cde2, type: 3}
   animatorCasual: {fileID: 9100000, guid: 3f3768234e25e3c49a6c9fad479dd87f, type: 2}
-  animatorBattle: {fileID: 9100000, guid: 17ada71c4a511d340adb777362fe1aa7, type: 2}
+  animatorBattle: {fileID: 9100000, guid: 22b02d0c426ff4a479d2326cd458bcc0, type: 2}
   player: {fileID: 1772134254383059279}
   healthBar: {fileID: 3463140737678735724}
 --- !u!114 &7412524854975004633

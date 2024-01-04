@@ -5883,7 +5883,7 @@ MonoBehaviour:
   _logoutButton: {fileID: 1180099609}
   _usernameText: {fileID: 1053767159}
   _loadButton: {fileID: 1040849891}
-  _playerPrefsSavedGameDataStorer: {fileID: 1614337488}
+  _playerPrefs: {fileID: 0}
 --- !u!114 &1187318152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,17 +7253,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1614337488 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2260963716703546697, guid: 7331aed8446b80f4ab2f301e2bab2ffe, type: 3}
-  m_PrefabInstance: {fileID: 1167403814}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4d3f2fce70b2441bd76f6c5777e8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1630726910
 GameObject:
   m_ObjectHideFlags: 0
