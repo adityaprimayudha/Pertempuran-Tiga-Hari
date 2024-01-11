@@ -1,0 +1,31 @@
+{
+  "quizzes": [
+    {
+      "question": "Tanggal berapa Brigjen Mallaby datang ke Surabaya?",
+      "answers": [
+        "25 Oktober 1945",
+        "25 September 1945",
+        "25 Oktober 1954"
+      ],
+      "correct": "0"
+    },
+    {
+      "question": "Contoh hasil negosiasi yang disepakati Moestopo dan Mallaby",
+      "answers": [
+        "Melucuti senjata rakyat Surabaya",
+        "Melucuti senjata pasukan Jepang",
+        "Melucuti senjata pasukan Sekutu"
+      ],
+      "correct": "1"
+    },
+    {
+      "question": "Dimanakah kapal Armada Brigade 49 milik Mallaby berlabuh di Surabaya?",
+      "answers": [
+        "Pelabuhan Tanjung Priok",
+        "Pelabuhan Sunda",
+        "Pelabuhan Tanjung Perak"
+      ],
+      "correct": "2"
+    }
+  ]
+}

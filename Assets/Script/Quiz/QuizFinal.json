@@ -1,0 +1,40 @@
+{
+  "quizzes": [
+    {
+      "question": "Pada tanggal berapa terjadi negosiasi antara Ir. Soekarno dkk dengan pihak Sekutu di peristiwa ini?",
+      "answers": [
+        "31 Oktober 1945",
+        "30 Oktober 1945",
+        "31 Oktober 1954"
+      ],
+      "correct": "1"
+    },
+    {
+      "question": "Hasil negosiasi antara Ir. Soekarno dkk dengan pihak Sekutu tersebut adalah?",
+      "answers": [
+        "Pembebasan Ir. Soekarno dan Hatta",
+        "Gencatan senjata sementara",
+        "Mundurnya pasukan Sekutu dari Surabaya"
+      ],
+      "correct": "1"
+    },
+    {
+      "question": "Siapakah petinggi dari pasukan Sekutu yang terbunuh dalam peristiwa ini?",
+      "answers": [
+        "Brigadir Jenderal A.W.S. Mallaby",
+        "Letnan Jenderal Sir Philip Christison",
+        "Mayor Jenderal Douglas C. Hawthorn"
+      ],
+      "correct": "0"
+    },
+    {
+      "question": "Nama lokasi terjadinya pertempuran yang menyebabkan kematian Brigjen A.W.S. Mallaby?",
+      "answers": [
+        "Tugu Pahlawan",
+        "Gedung Sate",
+        "Gedung Internatio"
+      ],
+      "correct": "2"
+    }
+  ]
+}

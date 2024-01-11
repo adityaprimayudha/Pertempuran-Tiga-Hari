@@ -5,6 +5,7 @@ using TMPro;
 using System.IO;
 using PixelCrushers;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class CheckAuth : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class CheckAuth : MonoBehaviour
     [SerializeField] private Button _loadButton;
     private string json;
     private LogStatus logStatus;
-    [SerializeField] private PlayerPrefsSavedGameDataStorer _playerPrefs;
+    private PlayerPrefsSavedGameDataStorer _playerPrefs;
 
     private void Awake()
     {
@@ -94,5 +95,11 @@ public class CheckAuth : MonoBehaviour
         {
             _loadButton.interactable = false;
         }
+    }
+
+    public void ResetQuiz()
+    {
+        QuizManager.GetInstance().totalCorrectAnswer = 0;
+        QuizManager.GetInstance().totalIncorrectAnswer = 0;
     }
 }

@@ -1,0 +1,31 @@
+{
+  "quizzes": [
+    {
+      "question": "Apa isi selebaran yang disebarkan pihak Sekutu lewat pesawat terbang di Surabaya?",
+      "answers": [
+        "Ultimatum untuk menyerahkan senjata milik rakyat Surabaya kepada Sekutu",
+        "Ultimatum untuk menyerahkan senjata milik rakyat Surabaya kepada Jepang",
+        "Ultimatum untuk para rakyat Surabaya agar pergi keluar dari Surabaya"
+      ],
+      "correct": "0"
+    },
+    {
+      "question": "Pada tanggal berapa rakyat Surabaya mulai melakukan penyerbuan terhadap pasukan Sekutu?",
+      "answers": [
+        "26 Oktober 1945",
+        "27 Oktober 1945",
+        "28 Oktober 1945"
+      ],
+      "correct": "2"
+    },
+    {
+      "question": "Siapakah yang menelepon Soekarno untuk mengendalikan situasi di Surabaya setelah terjadi perlawanan dari rakyat Surabaya?",
+      "answers": [
+        "Jenderal Sudirman",
+        "Letnan Jenderal Sir Philip Christison",
+        "Brigadir Jenderal A.W.S. Mallaby"
+      ],
+      "correct": "1"
+    }
+  ]
+}

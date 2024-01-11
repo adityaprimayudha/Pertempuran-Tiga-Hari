@@ -892,7 +892,9 @@ MonoBehaviour:
   m_Name: PlaySequenceClip
   m_EditorClassIdentifier: 
   template:
-    sequence: Fade(In,2);
+    sequence: 'Fade(In,2);
+
+      SetActive(Basic Standard UI Selector Elements,true);'
     listener: {fileID: 0}
   listener:
     exposedName: 

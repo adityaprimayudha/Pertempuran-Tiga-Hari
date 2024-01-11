@@ -559,6 +559,34 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 10
+    fields:
+    - title: Name
+      value: totalCorrectAnswers
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 11
+    fields:
+    - title: Name
+      value: totalIncorrectAnswers
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -2999,7 +3027,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 481.09888
+        y: 482.41467
         width: 160
         height: 30
     - id: 10
@@ -3029,10 +3057,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetEnabled(TestOmbak,true,Objective);
+        value: 'SetActive(PopupQuiz, true);
 
-          SetActive(Basic
-          Standard UI Selector Elements,true);
+          SetActive(Basic Standard UI
+          Selector Elements,true);
 
           StopConversation();
 
@@ -4585,7 +4613,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetEnabled(PositionSaver,true,MC)
+        value: 'SetEnabled(PositionSaver,true,MC);
+
+          SetActive(PopupQuiz,true);
+
+          Continue()'
         type: 0
         typeString: 
       conversationID: 10
@@ -4597,10 +4629,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'NextScene("GedungInternatio");
-
-        SetQuestState("Lakukan
-        Penyerbuan", "success")'
+      userScript: SetQuestState("Lakukan Penyerbuan", "success");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5256,8 +5285,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 43.134758, y: 332.9536}
+    canvasZoom: 1.09
   - id: 13
     fields:
     - title: Title
